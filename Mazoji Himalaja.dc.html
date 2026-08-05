@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Mukta:wght@300;400;500;600;700&display=swap">
+<script src="./image-slot.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://nirveyyunay.lt/#restaurant",
+  "name": "Mažoji Himalaja — Momo & Tandoori",
+  "description": "The first Nepali kitchen in Lithuania. Hand-folded momo, tandoor-fired tikka and slow curries — Nepali and Indian cuisine in Vilnius Old Town.",
+  "url": "https://nirveyyunay.lt/",
+  "servesCuisine": ["Nepalese", "Indian", "Asian"],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card",
+  "telephone": "+37066335083",
+  "email": "info@nirveyyunay.lt",
+  "acceptsReservations": "True",
+  "image": "https://nirveyyunay.lt/hero.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pylimo g. 27",
+    "addressLocality": "Vilnius",
+    "postalCode": "LT-01309",
+    "addressCountry": "LT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 54.6777136,
+    "longitude": 25.2796416
+  },
+  "hasMap": "https://maps.google.com/?q=54.6777136,25.2796416",
+  "sameAs": [
+    "https://www.instagram.com/mazoji_himalaja/",
+    "https://www.facebook.com/profile.php?id=61553937435091",
+    "https://wolt.com/en/ltu/vilnius/restaurant/mazoji-himalaja-momo-tandoori"
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:30", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:30", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:30", "closes": "20:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "120",
+    "bestRating": "5"
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": "https://nirveyyunay.lt/#reserve"
+  },
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Mažoji Himalaja Menu",
+    "inLanguage": ["en", "lt"],
+    "hasMenuSection": [
+      { "@type": "MenuSection", "name": "Starters", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Vegetable Samosa", "suitableForDiet": "https://schema.org/VeganDiet", "offers": { "@type": "Offer", "price": "8.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Onion Bhaji", "suitableForDiet": "https://schema.org/VeganDiet", "offers": { "@type": "Offer", "price": "7.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Vegetable Pakora", "suitableForDiet": "https://schema.org/VeganDiet", "offers": { "@type": "Offer", "price": "7.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Paneer Pakora", "offers": { "@type": "Offer", "price": "8.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Tandoori Aloo Paratha", "offers": { "@type": "Offer", "price": "6.80", "priceCurrency": "EUR" } }
+      ]},
+      { "@type": "MenuSection", "name": "Soups & Salads", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Chicken Thukpa", "offers": { "@type": "Offer", "price": "10.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Lamb Thukpa", "offers": { "@type": "Offer", "price": "11.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Kwati Soup", "suitableForDiet": "https://schema.org/VeganDiet", "offers": { "@type": "Offer", "price": "7.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Nepali Chatpata Salad", "suitableForDiet": "https://schema.org/VeganDiet", "offers": { "@type": "Offer", "price": "7.80", "priceCurrency": "EUR" } }
+      ]},
+      { "@type": "MenuSection", "name": "Momo", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Chicken Momo", "offers": { "@type": "Offer", "price": "12.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Paneer Momo", "offers": { "@type": "Offer", "price": "12.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Chicken Momo Jhol", "offers": { "@type": "Offer", "price": "13.80", "priceCurrency": "EUR" } }
+      ]},
+      { "@type": "MenuSection", "name": "From the Tandoor", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Chicken Tikka", "offers": { "@type": "Offer", "price": "12.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Chicken Malai Tikka", "offers": { "@type": "Offer", "price": "13.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Paneer Tikka", "offers": { "@type": "Offer", "price": "12.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Nepali Chicken Sekuwa", "offers": { "@type": "Offer", "price": "13.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Nepali Lamb Sekuwa", "offers": { "@type": "Offer", "price": "17.30", "priceCurrency": "EUR" } }
+      ]},
+      { "@type": "MenuSection", "name": "Curries", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Butter Chicken", "offers": { "@type": "Offer", "price": "12.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Chicken Tikka Masala", "offers": { "@type": "Offer", "price": "12.30", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Paneer Masala", "offers": { "@type": "Offer", "price": "11.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Vegetable Masala Curry", "suitableForDiet": "https://schema.org/VeganDiet", "offers": { "@type": "Offer", "price": "11.30", "priceCurrency": "EUR" } }
+      ]},
+      { "@type": "MenuSection", "name": "Sides, Sweets & Drinks", "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Fresh Naan", "offers": { "@type": "Offer", "price": "2.00", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Basmati Rice", "offers": { "@type": "Offer", "price": "3.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Jeera Rice", "offers": { "@type": "Offer", "price": "5.80", "priceCurrency": "EUR" } },
+        { "@type": "MenuItem", "name": "Mango Lassi", "offers": { "@type": "Offer", "price": "5.80", "priceCurrency": "EUR" } }
+      ]}
+    ]
+  }
+}
+</script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:78px}
+  body{background:#F5ECDA;color:#2C1B12}
+  a{color:#7A2016}
+  a:hover{color:#A83A22}
+  ::selection{background:#C79A3F;color:#3A0F0C}
+  @keyframes floatUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .4s ease-out,transform .4s ease-out;will-change:opacity,transform}
+  .reveal.in{opacity:1;transform:none}
+  .sig-grid>.reveal:nth-child(1){transition-delay:0s}
+  .sig-grid>.reveal:nth-child(2){transition-delay:.1s}
+  .sig-grid>.reveal:nth-child(3){transition-delay:.2s}
+
+  /* hero load stagger */
+  .hero-rise{animation:floatUp .55s cubic-bezier(.22,.61,.36,1) both}
+  .hero-rise.d1{animation-delay:.05s}
+  .hero-rise.d2{animation-delay:.13s}
+  .hero-rise.d3{animation-delay:.21s}
+  .hero-rise.d4{animation-delay:.29s}
+  .hero-rise.d5{animation-delay:.37s}
+
+  /* header scroll state */
+  .site-header{background:rgba(245,236,218,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid rgba(120,32,22,.08);transition:background-color .3s ease,box-shadow .3s ease,border-color .3s ease}
+  .site-header.scrolled{background:rgba(245,236,218,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:rgba(120,32,22,.16);box-shadow:0 6px 24px rgba(74,18,14,.09)}
+
+  /* dish images: continuous ken burns + hover lift */
+  .kenburns{animation:kenburns 20s ease-in-out infinite alternate;will-change:transform}
+  .dish-frame{transition:transform .3s ease,box-shadow .3s ease}
+  .dish-frame:hover{transform:scale(1.03);box-shadow:0 22px 50px rgba(74,18,14,.22)}
+
+  /* buttons */
+  .btn-anim{transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease,border-color .22s ease,color .22s ease}
+  .btn-anim:hover{transform:scale(1.03);box-shadow:0 10px 24px rgba(74,18,14,.22)}
+
+  /* order / lift cards */
+  .lift-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .lift-card:hover{box-shadow:0 20px 44px rgba(74,18,14,.16)}
+
+  /* social icons */
+  .icon-anim{transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease}
+  .icon-anim:hover{transform:translateY(-2px)}
+
+  /* nav underline */
+  .nav-link{position:relative;display:inline-block;padding-bottom:3px}
+  .nav-link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:#B07A24;border-radius:2px;transform:scaleX(0);transform-origin:center;transition:transform .28s ease}
+  .nav-link:hover::after{transform:scaleX(1)}
+
+  /* rating stars */
+  .star-btn{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+  .star-btn>span{display:inline-block;transition:color .3s ease}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+    .hero-rise{animation:none !important}
+    .kenburns{animation:none !important}
+    .dish-frame,.btn-anim,.lift-card,.icon-anim,.site-header,.nav-link::after,.star-btn,.star-btn>span{transition:none !important}
+    .dish-frame:hover,.btn-anim:hover,.lift-card:hover,.icon-anim:hover{transform:none !important}
+  }
+</style>
+</helmet>
+
+
+<div style="font-family:'Mukta',system-ui,sans-serif;background:#F5ECDA;color:#2C1B12;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" style="position:sticky;top:0;z-index:60">
+    <div style="max-width:1140px;margin:0 auto;padding:0 26px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <a href="#top" style="text-decoration:none;display:flex;flex-direction:column;line-height:1.05">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;color:#5A1712;letter-spacing:.01em">Mažoji Himalaja</span>
+        <span style="font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:#B07A24;font-weight:600;margin-top:2px">Momo &amp; Tandoori · Vilnius</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:30px">
+        <ul style="display:flex;gap:28px;list-style:none;align-items:center;margin:0">
+          <li><a href="#menu" class="nav-link" style="text-decoration:none;font-size:13.5px;font-weight:500;color:#3A2419;letter-spacing:.02em">{{ t.nav.menu }}</a></li>
+          <li><a href="#drinks" class="nav-link" style="text-decoration:none;font-size:13.5px;font-weight:500;color:#3A2419;letter-spacing:.02em">{{ t.nav.drinks }}</a></li>
+          <li><a href="#order" class="nav-link" style="text-decoration:none;font-size:13.5px;font-weight:500;color:#3A2419;letter-spacing:.02em">{{ t.nav.order }}</a></li>
+          <li><a href="#reserve" class="nav-link" style="text-decoration:none;font-size:13.5px;font-weight:500;color:#3A2419;letter-spacing:.02em">{{ t.nav.reserve }}</a></li>
+          <li><a href="#reviews" class="nav-link" style="text-decoration:none;font-size:13.5px;font-weight:500;color:#3A2419;letter-spacing:.02em">{{ t.nav.reviews }}</a></li>
+          <li><a href="#visit" class="nav-link" style="text-decoration:none;font-size:13.5px;font-weight:500;color:#3A2419;letter-spacing:.02em">{{ t.nav.visit }}</a></li>
+        </ul>
+        <button sc-camel-on-click="{{ toggleLang }}" type="button" class="btn-anim" style="display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid rgba(120,32,22,.28);border-radius:999px;padding:7px 15px;font-family:'Mukta',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:#5A1712;cursor:pointer" style-hover="border-color:#C79A3F;background:rgba(199,154,63,.12)">{{ langLabel }}</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="top"></div>
+
+  <!-- ================= HERO ================= -->
+  <section style="position:relative;overflow:hidden;background:#4A120E;color:#F5ECDA">
+    <div class="kenburns" style="position:absolute;inset:0">
+      <image-slot id="hero-bg" shape="rect" placeholder="Drop a hero photo — dining room or a hero dish"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(58,12,9,.94) 0%,rgba(74,18,14,.82) 46%,rgba(74,18,14,.42) 100%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1140px;margin:0 auto;padding:118px 26px 108px;pointer-events:none">
+      <div class="hero-rise d1" style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+        <span style="width:34px;height:1px;background:#C79A3F"></span>
+        <span style="font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#DBB45E;font-weight:600">{{ t.hero.kicker }}</span>
+      </div>
+      <h1 class="hero-rise d2" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,6.6vw,78px);line-height:1.02;max-width:15ch;margin-bottom:20px;letter-spacing:.005em">{{ t.hero.title }}</h1>
+      <p class="hero-rise d3" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,2.5vw,26px);color:#E9D9B8;max-width:32ch;margin-bottom:18px">{{ t.hero.tagline }}</p>
+      <p class="hero-rise d4" style="max-width:50ch;color:rgba(245,236,218,.8);font-size:15.5px;margin-bottom:38px">{{ t.hero.desc }}</p>
+      <div class="hero-rise d5" style="display:flex;gap:14px;flex-wrap:wrap;pointer-events:auto">
+        <a href="#reserve" class="btn-anim" style="text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.03em;padding:15px 30px;border-radius:999px;background:#C79A3F;color:#3A0F0C;border:1.5px solid #C79A3F" style-hover="background:#DBB45E;border-color:#DBB45E">{{ t.hero.btnReserve }}</a>
+        <a href="#order" class="btn-anim" style="text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.03em;padding:15px 30px;border-radius:999px;color:#F5ECDA;border:1.5px solid rgba(245,236,218,.34)" style-hover="border-color:#C79A3F;color:#DBB45E">{{ t.hero.btnOrder }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNATURE ================= -->
+  <sc-if value="{{ showSignature }}" hint-placeholder-val="{{ true }}">
+  <section style="max-width:1140px;margin:0 auto;padding:90px 26px 40px">
+    <div class="reveal" style="text-align:center;margin-bottom:46px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px">
+        <span style="width:40px;height:1px;background:rgba(120,32,22,.3)"></span>
+        <span style="color:#B07A24;font-size:14px">✦</span>
+        <span style="width:40px;height:1px;background:rgba(120,32,22,.3)"></span>
+      </div>
+      <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#B07A24;font-weight:600;margin-bottom:10px">{{ t.sig.kicker }}</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,46px);color:#5A1712">{{ t.sig.title }}</h2>
+    </div>
+    <div class="sig-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+      <sc-for list="{{ signature }}" as="s" hint-placeholder-count="3">
+        <div class="reveal" style="display:flex;flex-direction:column">
+          <div class="dish-frame" style="position:relative;aspect-ratio:4/5;border-radius:220px 220px 14px 14px;overflow:hidden;border:1px solid rgba(120,32,22,.18);box-shadow:0 14px 34px rgba(74,18,14,.12)">
+            <div class="kenburns" style="position:absolute;inset:0"><image-slot id="{{ s.slotId }}" shape="rect" placeholder="{{ s.placeholder }}"></image-slot></div>
+          </div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;color:#5A1712;margin:20px 0 4px;text-align:center">{{ s.name }}</h3>
+          <p style="text-align:center;color:#7C6350;font-size:14px;max-width:30ch;margin:0 auto">{{ s.note }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ================= MENU ================= -->
+  <section id="menu" style="max-width:1140px;margin:0 auto;padding:80px 26px 90px">
+    <div class="reveal" style="margin-bottom:48px;max-width:600px">
+      <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#B07A24;font-weight:600;margin-bottom:12px">{{ t.menu.kicker }}</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,4.6vw,50px);color:#5A1712;margin-bottom:14px;line-height:1.05">{{ t.menu.title }}</h2>
+      <p style="color:#7C6350;font-size:16px">{{ t.menu.lede }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:64px;row-gap:10px">
+      <sc-for list="{{ menu }}" as="cat" hint-placeholder-count="6">
+        <div style="margin-bottom:44px;break-inside:avoid">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+            <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;color:#7A2016;white-space:nowrap">{{ cat.category }}</h3>
+            <span style="flex:1;height:1px;background:repeating-linear-gradient(90deg,rgba(199,154,63,.6) 0 5px,transparent 5px 9px)"></span>
+          </div>
+          <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="4">
+            <div class="reveal" style="display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(120,32,22,.1)">
+              <div>
+                <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
+                  <span style="font-weight:600;font-size:15px;color:#3A2419">{{ it.name }}</span>
+                  <sc-if value="{{ it.tag }}" hint-placeholder-val=""><span style="font-size:11px;font-weight:600;color:#B07A24;letter-spacing:.05em">{{ it.tag }}</span></sc-if>
+                </div>
+                <sc-if value="{{ it.desc }}" hint-placeholder-val=""><p style="font-size:13.5px;color:#7C6350;margin-top:3px;max-width:46ch">{{ it.desc }}</p></sc-if>
+              </div>
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;color:#5A1712;white-space:nowrap">{{ it.priceLabel }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+    <p style="font-size:13px;color:#7C6350;margin-top:8px">{{ t.menu.note }}</p>
+  </section>
+
+  <!-- ================= DRINKS ================= -->
+  <section id="drinks" style="max-width:1140px;margin:0 auto;padding:10px 26px 90px">
+    <div class="reveal" style="margin-bottom:40px;max-width:600px">
+      <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#B07A24;font-weight:600;margin-bottom:12px">{{ t.drinks.kicker }}</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,4.6vw,50px);color:#5A1712;margin-bottom:14px;line-height:1.05">{{ t.drinks.title }}</h2>
+      <p style="color:#7C6350;font-size:16px">{{ t.drinks.lede }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:64px;row-gap:10px">
+      <sc-for list="{{ drinks }}" as="grp" hint-placeholder-count="2">
+        <div style="margin-bottom:44px;break-inside:avoid">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+            <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;color:#7A2016;white-space:nowrap">{{ grp.group }}</h3>
+            <span style="flex:1;height:1px;background:repeating-linear-gradient(90deg,rgba(199,154,63,.6) 0 5px,transparent 5px 9px)"></span>
+          </div>
+          <sc-for list="{{ grp.items }}" as="it" hint-placeholder-count="3">
+            <div class="reveal" style="display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(120,32,22,.1)">
+              <div>
+                <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
+                  <span style="font-weight:600;font-size:15px;color:#3A2419">{{ it.name }}</span>
+                  <sc-if value="{{ it.tag }}" hint-placeholder-val=""><span style="font-size:11px;font-weight:600;color:#B07A24;letter-spacing:.05em">{{ it.tag }}</span></sc-if>
+                </div>
+                <sc-if value="{{ it.desc }}" hint-placeholder-val=""><p style="font-size:13.5px;color:#7C6350;margin-top:3px;max-width:46ch">{{ it.desc }}</p></sc-if>
+              </div>
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;color:#5A1712;white-space:nowrap">{{ it.priceLabel }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ================= ORDER ================= -->
+  <section id="order" style="background:#EFE3CC;border-top:1px solid rgba(120,32,22,.12);border-bottom:1px solid rgba(120,32,22,.12)">
+    <div style="max-width:1140px;margin:0 auto;padding:82px 26px">
+      <div class="reveal">
+      <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#B07A24;font-weight:600;margin-bottom:12px">{{ t.order.kicker }}</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,46px);color:#5A1712;margin-bottom:12px">{{ t.order.title }}</h2>
+      <p style="color:#7C6350;font-size:16px;max-width:52ch;margin-bottom:38px">{{ t.order.lede }}</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:760px">
+        <a href="{{ woltUrl }}" target="_blank" rel="noopener" class="lift-card" style="text-decoration:none;background:#F5ECDA;border:1px solid rgba(120,32,22,.18);border-radius:16px;padding:32px 30px;display:block" style-hover="border-color:#C79A3F;transform:translateY(-3px)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#5A1712;margin-bottom:6px">Wolt</div>
+          <p style="font-size:14px;color:#7C6350;margin-bottom:16px">{{ t.order.woltHint }}</p>
+          <span style="font-size:13px;font-weight:700;color:#B07A24;letter-spacing:.03em">{{ t.order.woltGo }}</span>
+        </a>
+        <a href="{{ boltUrl }}" target="_blank" rel="noopener" class="lift-card" style="text-decoration:none;background:#F5ECDA;border:1px solid rgba(120,32,22,.18);border-radius:16px;padding:32px 30px;display:block" style-hover="border-color:#C79A3F;transform:translateY(-3px)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:27px;color:#5A1712;margin-bottom:6px">Bolt Food</div>
+          <p style="font-size:14px;color:#7C6350;margin-bottom:16px">{{ t.order.boltHint }}</p>
+          <span style="font-size:13px;font-weight:700;color:#B07A24;letter-spacing:.03em">{{ t.order.boltGo }}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESERVE ================= -->
+  <section id="reserve" style="max-width:1140px;margin:0 auto;padding:90px 26px">
+    <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:start">
+      <div class="reveal">
+        <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#B07A24;font-weight:600;margin-bottom:12px">{{ t.reserve.kicker }}</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.4vw,46px);color:#5A1712;margin-bottom:20px">{{ t.reserve.title }}</h2>
+        <p style="color:#7C6350;font-size:15px;margin-bottom:16px">{{ t.reserve.info1 }} <a href="{{ phoneLink }}" style="color:#7A2016;font-weight:600">{{ phone }}</a>.</p>
+        <p style="color:#7C6350;font-size:15px">{{ t.reserve.info2 }}</p>
+      </div>
+      <form sc-camel-on-submit="{{ submitBooking }}" class="reveal" style="background:#FBF6EA;border:1px solid rgba(120,32,22,.16);border-radius:18px;padding:32px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div><label for="f-name" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelName }}</label><input id="f-name" required="" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12"></div>
+          <div><label for="f-phone" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelPhone }}</label><input id="f-phone" type="tel" required="" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12"></div>
+        </div>
+        <div style="margin-top:16px"><label for="f-email" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelEmail }}</label><input id="f-email" type="email" required="" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px">
+          <div><label for="f-date" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelDate }}</label><input id="f-date" type="date" required="" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12"></div>
+          <div><label for="f-time" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelTime }}</label><input id="f-time" type="time" required="" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12"></div>
+          <div><label for="f-party" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelParty }}</label><sc-raw-select id="f-party" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12"><option>1</option><option selected="">2</option><option>3</option><option>4</option><option>5</option><option>6+</option></sc-raw-select></div>
+        </div>
+        <div style="margin-top:16px"><label for="f-notes" style="display:block;font-size:12.5px;font-weight:600;color:#5A1712;margin-bottom:5px">{{ t.reserve.labelNotes }}</label><textarea id="f-notes" rows="3" style="width:100%;padding:11px 13px;border:1px solid rgba(120,32,22,.2);border-radius:9px;background:#fff;font-family:'Mukta',sans-serif;font-size:14.5px;color:#2C1B12;resize:vertical"></textarea></div>
+        <button type="submit" class="btn-anim" style="margin-top:20px;background:#5A1712;color:#F5ECDA;border:none;font-family:'Mukta',sans-serif;font-weight:600;font-size:14.5px;padding:14px 28px;border-radius:999px;cursor:pointer;letter-spacing:.02em" style-hover="background:#7A2016">{{ t.reserve.submit }}</button>
+        <p style="font-size:12px;color:#9A8574;margin-top:12px">{{ t.reserve.formNote }}</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS + FEEDBACK ================= -->
+  <section id="reviews" style="background:#4A120E;color:#F5ECDA">
+    <div style="max-width:1140px;margin:0 auto;padding:88px 26px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+        <!-- What guests say -->
+        <div class="reveal">
+          <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#DBB45E;font-weight:600;margin-bottom:12px">{{ t.reviews.kicker }}</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4.2vw,44px);color:#F5ECDA;margin-bottom:22px">{{ t.reviews.title }}</h2>
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:30px">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:52px;color:#DBB45E;line-height:1">{{ rating }}</span>
+            <span style="color:#DBB45E;font-size:18px;letter-spacing:3px">★★★★★</span>
+            <span style="font-size:13px;color:rgba(245,236,218,.62)">{{ t.reviews.ratingSrc }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+              <div style="border:1px solid rgba(219,180,94,.28);border-radius:14px;padding:22px 24px">
+                <div style="color:#DBB45E;font-size:13px;letter-spacing:2px;margin-bottom:10px">{{ r.starsGlyph }}</div>
+                <blockquote style="font-size:14.5px;color:rgba(245,236,218,.9);margin-bottom:12px;font-style:italic">“{{ r.text }}”</blockquote>
+                <cite style="font-style:normal;font-size:13px;color:rgba(245,236,218,.58)">— {{ r.author }}</cite>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- Share your experience (compliant routing) -->
+        <div class="reveal" style="background:rgba(245,236,218,.05);border:1px solid rgba(219,180,94,.3);border-radius:18px;padding:34px 32px">
+          <p style="font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#DBB45E;font-weight:600;margin-bottom:12px">{{ t.fb.kicker }}</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;color:#F5ECDA;margin-bottom:8px">{{ t.fb.title }}</h3>
+          <p style="font-size:14px;color:rgba(245,236,218,.72);margin-bottom:22px">{{ t.fb.lede }}</p>
+
+          <div style="display:flex;gap:10px;margin-bottom:6px">
+            <sc-for list="{{ stars }}" as="st" hint-placeholder-count="5">
+              <button sc-camel-on-click="{{ st.on }}" type="button" aria-label="{{ st.label }}" class="star-btn" style="background:none;border:none;cursor:pointer;font-size:38px;line-height:1;padding:2px" style-hover="transform:scale(1.2)" style-active="transform:scale(.94)"><span style="color:{{ st.color }}">★</span></button>
+            </sc-for>
+          </div>
+
+          <!-- Prompt state -->
+          <sc-if value="{{ notRated }}" hint-placeholder-val="{{ true }}">
+            <p style="font-size:13px;color:rgba(245,236,218,.55);margin-top:10px">{{ t.fb.hint }}</p>
+          </sc-if>
+
+          <!-- Happy path: Google emphasized -->
+          <sc-if value="{{ showHappy }}" hint-placeholder-val="">
+            <div style="margin-top:20px;animation:floatUp .35s ease both">
+              <p style="font-size:15px;color:#F5ECDA;margin-bottom:18px">{{ t.fb.happyMsg }}</p>
+              <a href="{{ googleUrl }}" target="_blank" rel="noopener" class="btn-anim" style="display:block;text-align:center;text-decoration:none;background:#DBB45E;color:#3A0F0C;font-weight:700;font-size:15px;padding:16px;border-radius:12px;letter-spacing:.02em" style-hover="background:#E8CB84">{{ t.fb.googleBtn }}</a>
+              <button sc-camel-on-click="{{ openPrivate }}" type="button" style="display:block;width:100%;margin-top:12px;background:none;border:none;color:rgba(245,236,218,.6);font-family:'Mukta',sans-serif;font-size:13px;text-decoration:underline;cursor:pointer">{{ t.fb.privateLink }}</button>
+            </div>
+          </sc-if>
+
+          <!-- Unhappy path: private emphasized -->
+          <sc-if value="{{ showUnhappy }}" hint-placeholder-val="">
+            <div style="margin-top:20px;animation:floatUp .35s ease both">
+              <p style="font-size:15px;color:#F5ECDA;margin-bottom:16px">{{ t.fb.sorryMsg }}</p>
+            </div>
+          </sc-if>
+
+          <!-- Private feedback form (shown for unhappy, or on request) -->
+          <sc-if value="{{ showPrivateForm }}" hint-placeholder-val="">
+            <form sc-camel-on-submit="{{ submitPrivate }}" style="margin-top:6px;animation:floatUp .35s ease both">
+              <textarea id="fb-text" rows="4" placeholder="{{ t.fb.placeholder }}" style="width:100%;padding:12px 14px;border:1px solid rgba(219,180,94,.35);border-radius:10px;background:rgba(245,236,218,.06);font-family:'Mukta',sans-serif;font-size:14px;color:#F5ECDA;resize:vertical;margin-bottom:12px"></textarea>
+              <input id="fb-contact" placeholder="{{ t.fb.contact }}" style="width:100%;padding:11px 14px;border:1px solid rgba(219,180,94,.35);border-radius:10px;background:rgba(245,236,218,.06);font-family:'Mukta',sans-serif;font-size:14px;color:#F5ECDA;margin-bottom:14px">
+              <button type="submit" class="btn-anim" style="width:100%;background:#DBB45E;color:#3A0F0C;border:none;font-family:'Mukta',sans-serif;font-weight:700;font-size:14.5px;padding:14px;border-radius:12px;cursor:pointer" style-hover="background:#E8CB84">{{ t.fb.sendPrivate }}</button>
+              <p style="font-size:12px;color:rgba(245,236,218,.5);margin-top:10px">{{ t.fb.privateNote }}</p>
+            </form>
+          </sc-if>
+
+          <!-- Thank you -->
+          <sc-if value="{{ sent }}" hint-placeholder-val="">
+            <p style="margin-top:20px;font-size:15px;color:#DBB45E;animation:floatUp .35s ease both">{{ t.fb.thanks }}</p>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VISIT / FOOTER ================= -->
+  <footer id="visit" style="background:#F5ECDA">
+    <div style="max-width:1140px;margin:0 auto;padding:82px 26px 40px">
+      <div class="reveal" style="display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:48px;margin-bottom:52px">
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:#5A1712;margin-bottom:14px">{{ t.visit.findUs }}</h3>
+          <p style="font-size:14.5px;color:#7C6350">{{ address }}</p>
+          <p style="margin-top:12px"><a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="color:#7A2016;font-weight:600;font-size:14.5px">{{ t.visit.directions }}</a></p>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:#5A1712;margin-bottom:14px">{{ t.visit.openingHours }}</h3>
+          <ul style="list-style:none;margin:0">
+            <sc-for list="{{ hours }}" as="h" hint-placeholder-count="3">
+              <li style="display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px solid rgba(120,32,22,.1);font-size:14px;color:#7C6350"><span>{{ h.days }}</span><span style="color:#3A2419;font-weight:500">{{ h.time }}</span></li>
+            </sc-for>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:#5A1712;margin-bottom:14px">{{ t.visit.contact }}</h3>
+          <p style="font-size:14.5px"><a href="{{ phoneLink }}" style="color:#7A2016;font-weight:500">{{ phone }}</a></p>
+          <p style="font-size:14.5px;margin-top:4px"><a href="{{ emailLink }}" style="color:#7A2016;font-weight:500">{{ email }}</a></p>
+          <div style="display:flex;gap:12px;margin-top:16px">
+            <a href="{{ instagramUrl }}" target="_blank" rel="noopener" aria-label="Instagram" class="icon-anim" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(120,32,22,.25);display:inline-flex;align-items:center;justify-content:center;color:#5A1712" style-hover="background:#5A1712;color:#F5ECDA;border-color:#5A1712">
+              <svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4.5"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <a href="{{ facebookUrl }}" target="_blank" rel="noopener" aria-label="Facebook" class="icon-anim" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(120,32,22,.25);display:inline-flex;align-items:center;justify-content:center;color:#5A1712" style-hover="background:#5A1712;color:#F5ECDA;border-color:#5A1712">
+              <svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 8.5h-2a1.5 1.5 0 0 0-1.5 1.5v2h3.5l-.5 3H12v7h-3v-7H7v-3h2v-2.3C9 6.9 10.6 5 13.2 5h2.3v3.5Z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(120,32,22,.15);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;color:#9A8574">
+        <span>© {{ year }} Mažoji Himalaja. {{ t.visit.rights }}</span>
+        <span>Pylimo g. 27, Vilnius</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;lt&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showSignature&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;reviewThreshold&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:4,&quot;min&quot;:3,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Reviews&quot;,&quot;unit&quot;:&quot;★&quot;}}">
+class Component extends DCLogic {
+  state = { lang: null, rating: 0, sent: false, forcePrivate: false };
+
+  FIXED = {
+    name: "Mažoji Himalaja",
+    address: "Pylimo g. 27, LT-01309 Vilnius, Lithuania",
+    mapsUrl: "https://maps.google.com/?q=54.6777136,25.2796416",
+    phone: "+370 663 35083",
+    email: "info@nirveyyunay.lt",
+    woltUrl: "https://wolt.com/en/ltu/vilnius/restaurant/mazoji-himalaja-momo-tandoori",
+    boltUrl: "https://food.bolt.eu/en-US/9-vilnius/p/83150-ma%C5%BEoji-himalaja-(pylimo-str.)",
+    instagramUrl: "https://www.instagram.com/mazoji_himalaja/",
+    facebookUrl: "https://www.facebook.com/profile.php?id=61553937435091",
+    rating: "4.7",
+    // ↓ Direct "write a review" deep link. Paste your Place ID after placeid= (see how-to below).
+    //    Until then this falls back to your Maps listing so the button is never dead.
+    googlePlaceId: "ChIJiRQB7GCV3UYRdhreOgETGv4",
+    get googleUrl() {
+      return this.googlePlaceId
+        ? "https://search.google.com/local/writereview?placeid=" + this.googlePlaceId
+        : "https://www.google.com/maps/search/?api=1&query=Ma%C5%BEoji+Himalaja+Pylimo+27+Vilnius";
+    }
+  };
+
+  TR = {
+    en: {
+      langLabel: "LT",
+      ui: {
+        nav: { menu: "Menu", drinks: "Drinks", order: "Order", reserve: "Reserve", reviews: "Reviews", visit: "Visit" },
+        hero: { kicker: "Nepali & Indian kitchen · Vilnius", title: "The taste of the Himalayas, in the heart of Vilnius", tagline: "Nepal's warmth, steamed fresh in the Old Town.", desc: "The first Nepali kitchen in Lithuania — hand-folded momo, tandoor-fired tikka and slow curries, served in a warm room on Pylimo street.", btnReserve: "Reserve a Table", btnOrder: "Order Delivery" },
+        sig: { kicker: "Chef's signatures", title: "Three dishes to begin with" },
+        menu: { kicker: "The Menu", title: "From the steamer & the tandoor", lede: "Steamed momo, slow curries and tandoori dishes made the way they are in Kathmandu. Vegan options throughout.", note: "🌶 mildly spicy · 🌶🌶 spicy · Prices include VAT. Menu changes seasonally — see Wolt for today's full list." },
+        drinks: { kicker: "Drinks", title: "To drink", lede: "A short list for now — a full drinks menu (hot & cold, alcoholic & non-alcoholic) is on the way." },
+        order: { kicker: "Order Online", title: "Delivery & pickup", lede: "Order straight from our kitchen through your favourite app.", woltHint: "Delivery & pickup — full menu, live tracking.", woltGo: "Order on Wolt →", boltHint: "Delivery & pickup across Vilnius.", boltGo: "Order on Bolt Food →" },
+        reserve: { kicker: "Reservations", title: "Book a table", info1: "For groups of six or more, or same-day bookings, please call us directly at", info2: "Send the form and your email app opens with the details filled in — we'll confirm by reply.", labelName: "Name", labelPhone: "Phone", labelEmail: "Email", labelDate: "Date", labelTime: "Time", labelParty: "Guests", labelNotes: "Notes (allergies, occasion…)", submit: "Send reservation request", formNote: "Opens your email app with the details pre-filled. Can later be swapped for a live booking system." },
+        reviews: { kicker: "From Google", title: "What guests say", ratingSrc: "average rating on Google" },
+        visit: { findUs: "Find us", directions: "Get Directions →", openingHours: "Opening hours", contact: "Contact", rights: "All rights reserved." },
+        fb: { kicker: "Your visit", title: "How was your experience?", lede: "Tap a star — your feedback helps us keep the momo perfect.", hint: "Tap the stars above to rate your visit.", happyMsg: "Wonderful — we're so glad! Would you share it on Google? It takes a moment and means the world to a small family kitchen.", googleBtn: "Leave a review on Google →", privateLink: "Prefer to tell us something privately instead?", sorryMsg: "We're sorry it wasn't perfect. Please tell us what happened — we read every message and want to make it right.", placeholder: "What could we have done better?", contact: "Your email or phone (so we can reply)", sendPrivate: "Send privately to the owner", privateNote: "This goes straight to our team — it is not published anywhere.", thanks: "Thank you — we've received your message and will be in touch.", }
+      },
+      hours: [ { days: "Mon – Thu", time: "11:30 – 21:00" }, { days: "Fri – Sat", time: "11:30 – 22:00" }, { days: "Sunday", time: "11:30 – 20:00" } ],
+      reviews: [
+        { stars: 5, text: "The chicken momo jhol was the best I've had outside Kathmandu. Warm service, cosy room.", author: "Sample guest" },
+        { stars: 5, text: "Generous portions, fair prices and the butter chicken is fantastic. Will be back.", author: "Sample guest" },
+        { stars: 4, text: "Lovely little place near the Old Town. The thukpa soup is perfect on a cold day.", author: "Sample guest" }
+      ],
+      signature: [
+        { slotId: "sig-momo", name: "Chicken Momo Jhol", note: "Steamed dumplings in an aromatic, spiced broth.", placeholder: "Drop photo — momo jhol" },
+        { slotId: "sig-tikka", name: "Chicken Tikka", note: "Yoghurt-marinated, fired in the tandoor.", placeholder: "Drop photo — tandoori tikka" },
+        { slotId: "sig-butter", name: "Butter Chicken", note: "Butter, cream, tomato and onion.", placeholder: "Drop photo — butter chicken" }
+      ],
+      menu: this.MENU_EN(),
+      drinks: this.DRINKS_EN()
+    },
+    lt: {
+      langLabel: "EN",
+      ui: {
+        nav: { menu: "Meniu", drinks: "Gėrimai", order: "Užsakyti", reserve: "Rezervuoti", reviews: "Atsiliepimai", visit: "Apsilankyti" },
+        hero: { kicker: "Nepaliečių ir indų virtuvė · Vilnius", title: "Himalajų skonis pačioje Vilniaus širdyje", tagline: "Nepalo šiluma, garuose kepta senamiestyje.", desc: "Pirmoji nepaliečių virtuvė Lietuvoje — rankomis lipdyti momo, tandūre kepta tikka ir lėtai virti kariai jaukioje patalpoje Pylimo gatvėje.", btnReserve: "Rezervuoti staliuką", btnOrder: "Užsisakyti pristatymą" },
+        sig: { kicker: "Šefo patiekalai", title: "Trys patiekalai pradžiai" },
+        menu: { kicker: "Meniu", title: "Iš garų puodo ir tandūro", lede: "Garuose troškinti momo, lėtai virti kariai ir tandūro patiekalai, gaminami kaip Katmandu. Visur yra veganiškų pasirinkimų.", note: "🌶 vidutiniškai aštru · 🌶🌶 aštru · Kainos su PVM. Meniu keičiasi sezoniškai — pilną sąrašą žr. Wolt." },
+        drinks: { kicker: "Gėrimai", title: "Gerti", lede: "Kol kas trumpas sąrašas — pilnas gėrimų meniu (karšti ir šalti, alkoholiniai ir nealkoholiniai) netrukus." },
+        order: { kicker: "Užsakyti internetu", title: "Pristatymas ir atsiėmimas", lede: "Užsisakykite tiesiai iš mūsų virtuvės per mėgstamą programėlę.", woltHint: "Pristatymas ir atsiėmimas — pilnas meniu, sekimas.", woltGo: "Užsisakyti per Wolt →", boltHint: "Pristatymas ir atsiėmimas visame Vilniuje.", boltGo: "Užsisakyti per Bolt Food →" },
+        reserve: { kicker: "Rezervacijos", title: "Rezervuokite staliuką", info1: "Grupėms nuo šešių žmonių ar tos pačios dienos rezervacijoms skambinkite tiesiogiai:", info2: "Išsiuntus formą atsidarys el. pašto programa su užpildytais duomenimis — patvirtinsime atsakymu.", labelName: "Vardas", labelPhone: "Telefonas", labelEmail: "El. paštas", labelDate: "Data", labelTime: "Laikas", labelParty: "Svečiai", labelNotes: "Pastabos (alergijos, proga…)", submit: "Siųsti rezervacijos užklausą", formNote: "Atidaro el. pašto programą su užpildytais duomenimis. Vėliau galima pakeisti tikra rezervacijų sistema." },
+        reviews: { kicker: "Iš Google", title: "Ką sako svečiai", ratingSrc: "vidutinis įvertinimas Google" },
+        visit: { findUs: "Kaip mus rasti", directions: "Gauti nuorodas →", openingHours: "Darbo valandos", contact: "Kontaktai", rights: "Visos teisės saugomos." },
+        fb: { kicker: "Jūsų apsilankymas", title: "Kaip praleidote laiką?", lede: "Spustelėkite žvaigždutę — jūsų nuomonė padeda tobulėti.", hint: "Įvertinkite apsilankymą spustelėdami žvaigždutes.", happyMsg: "Nuostabu — labai džiaugiamės! Gal pasidalintumėte Google? Tai užtruks akimirką ir labai svarbu mažai šeimos virtuvei.", googleBtn: "Palikti atsiliepimą Google →", privateLink: "Norėtumėte pasakyti ką nors privačiai?", sorryMsg: "Atsiprašome, kad nebuvo tobula. Parašykite, kas nutiko — perskaitome kiekvieną žinutę ir norime viską ištaisyti.", placeholder: "Ką galėjome padaryti geriau?", contact: "Jūsų el. paštas ar telefonas (kad atsakytume)", sendPrivate: "Siųsti privačiai savininkui", privateNote: "Ši žinutė keliauja tiesiai mūsų komandai — niekur neskelbiama.", thanks: "Ačiū — gavome jūsų žinutę ir susisieksime.", }
+      },
+      hours: [ { days: "Pir. – Ket.", time: "11:30 – 21:00" }, { days: "Penkt. – Šešt.", time: "11:30 – 22:00" }, { days: "Sekmadienis", time: "11:30 – 20:00" } ],
+      reviews: [
+        { stars: 5, text: "Vištienos momo džolė — skaniausias, kokį ragavau už Katmandu ribų. Šiltas aptarnavimas, jauki erdvė.", author: "Pavyzdinis svečias" },
+        { stars: 5, text: "Dosnios porcijos, sąžiningos kainos, o sviestinė vištiena tiesiog puiki. Tikrai grįšiu.", author: "Pavyzdinis svečias" },
+        { stars: 4, text: "Jauki vietelė netoli senamiesčio. Thukpa sriuba idealiai tinka šaltą dieną.", author: "Pavyzdinis svečias" }
+      ],
+      signature: [
+        { slotId: "sig-momo", name: "Vištienos momo džolė", note: "Garuose troškinti koldūnai aromatingame sultinyje.", placeholder: "Įkelkite nuotrauką — momo džolė" },
+        { slotId: "sig-tikka", name: "Vištienos tikka", note: "Marinuota jogurte, kepta tandūre.", placeholder: "Įkelkite nuotrauką — tandūrio tikka" },
+        { slotId: "sig-butter", name: "Sviestinė vištiena", note: "Sviestas, grietinėlė, pomidorai ir svogūnai.", placeholder: "Įkelkite nuotrauką — sviestinė vištiena" }
+      ],
+      menu: this.MENU_LT(),
+      drinks: this.DRINKS_LT()
+    }
+  };
+
+  MENU_EN() {
+    return [
+      { category: "Starters", items: [
+        { name: "Vegetable Samosa", tag: "vegan", desc: "Wheat pastry with potato, onion, peas, carrot and nuts. Salad and a sauce of your choice.", price: "8.30" },
+        { name: "Onion Bhaji", tag: "vegan", desc: "Crisp onion fritters in chickpea batter with cumin and ajwain, fresh chilli sauce.", price: "7.30" },
+        { name: "Vegetable Pakora", tag: "vegan", desc: "Zucchini and aubergine fried in spiced chickpea batter.", price: "7.80" },
+        { name: "Paneer Pakora", tag: "", desc: "Fried paneer cheese in chickpea batter and oriental spices.", price: "8.30" },
+        { name: "Tandoori Aloo Paratha", tag: "", desc: "Potato-stuffed flatbread with herbs, cucumber raita.", price: "6.80" }
+      ]},
+      { category: "Soups & Salads", items: [
+        { name: "Chicken Thukpa", tag: "🌶", desc: "Traditional Nepali noodle soup with chicken, greens and Himalayan spices.", price: "10.30" },
+        { name: "Lamb Thukpa", tag: "🌶", desc: "Natural broth, tender lamb and egg noodles with Nepali spices.", price: "11.30" },
+        { name: "Kwati Soup", tag: "vegan", desc: "Seven sprouted lentils with Panch Puran spices.", price: "7.30" },
+        { name: "Nepali Chatpata Salad", tag: "vegan", desc: "Chickpeas, tomato, cucumber, chilli, black salt, lime, coriander.", price: "7.80" }
+      ]},
+      { category: "Momo — our signature", items: [
+        { name: "Chicken Momo", tag: "", desc: "Steamed dumplings with chicken, ginger-garlic, herbs and momo spices.", price: "12.80" },
+        { name: "Paneer Momo", tag: "", desc: "Steamed dumplings with paneer, onion, herbs and momo spices.", price: "12.30" },
+        { name: "Chicken Momo Jhol", tag: "🌶", desc: "Momo swimming in an aromatic, spiced chicken broth.", price: "13.80" }
+      ]},
+      { category: "From the Tandoor", items: [
+        { name: "Chicken Tikka", tag: "🌶", desc: "Yoghurt-marinated chicken from the tandoor. Garlic naan, salad, sauce.", price: "12.80" },
+        { name: "Chicken Malai Tikka", tag: "", desc: "Chicken in a cream, butter and cashew marinade.", price: "13.30" },
+        { name: "Paneer Tikka", tag: "🌶", desc: "Paneer in a rich spice and yoghurt marinade.", price: "12.30" },
+        { name: "Nepali Chicken Sekuwa", tag: "🌶🌶", desc: "Chicken with Himalayan herbs and the chef's own spices.", price: "13.80" },
+        { name: "Nepali Lamb Sekuwa", tag: "🌶🌶", desc: "Lamb with Himalayan herbs and the chef's own spices.", price: "17.30" }
+      ]},
+      { category: "Curries", items: [
+        { name: "Butter Chicken", tag: "", desc: "Chicken breast in butter, cream, tomato and onion sauce.", price: "12.30" },
+        { name: "Chicken Tikka Masala", tag: "", desc: "Chicken breast in an aromatic tomato sauce.", price: "12.30" },
+        { name: "Paneer Masala", tag: "", desc: "Fragrant paneer stew with tomato, onion and ginger.", price: "11.80" },
+        { name: "Vegetable Masala Curry", tag: "vegan", desc: "Zucchini, aubergine, peppers, cauliflower in Indian spice sauce.", price: "11.30" }
+      ]},
+      { category: "Sides", items: [
+        { name: "Fresh Naan", tag: "", desc: "Baked to order in the tandoor.", price: "2.00" },
+        { name: "Basmati Rice", tag: "", desc: "", price: "3.80" },
+        { name: "Jeera Rice", tag: "", desc: "Basmati with cumin, turmeric, herbs and lime.", price: "5.80" }
+        // Add more sides here — same shape: { name, tag, desc, price }
+      ]},
+      { category: "Desserts", items: [
+        { name: "Gulab Jamun", tag: "", desc: "Warm milk dumplings in cardamom syrup.", price: "5.50" },
+        { name: "Soan Papdi", tag: "", desc: "Flaky gram-flour sweet with cardamom and pistachio.", price: "4.50" }
+      ]}
+    ];
+  }
+
+  MENU_LT() {
+    return [
+      { category: "Užkandžiai", items: [
+        { name: "Daržovių samosa", tag: "veganiška", desc: "Kvietinė tešla su bulvėmis, svogūnais, žirneliais, morkomis ir riešutais. Salotos ir padažas.", price: "8.30" },
+        { name: "Svogūnų badžis", tag: "veganiška", desc: "Traškūs svogūnų kepsneliai avinžirnių tešloje, šviežio čili padažas.", price: "7.30" },
+        { name: "Daržovių pakora", tag: "veganiška", desc: "Cukinijos ir baklažanai prieskoninėje avinžirnių tešloje.", price: "7.80" },
+        { name: "Paneero pakora", tag: "", desc: "Keptas paneero sūris avinžirnių tešloje su rytietiškais prieskoniais.", price: "8.30" },
+        { name: "Tandūrio aliu parata", tag: "", desc: "Bulvėmis įdaryta duona su žolelėmis, agurkų raita.", price: "6.80" }
+      ]},
+      { category: "Sriubos ir salotos", items: [
+        { name: "Vištienos thukpa", tag: "🌶", desc: "Tradicinė nepalietiška makaronų sriuba su vištiena ir Himalajų prieskoniais.", price: "10.30" },
+        { name: "Ėrienos thukpa", tag: "🌶", desc: "Natūralus sultinys, švelni ėriena ir kiaušininiai makaronai.", price: "11.30" },
+        { name: "Kwati sriuba", tag: "veganiška", desc: "Septynių daigintų ankštinių sriuba su Panch Puran prieskoniais.", price: "7.30" },
+        { name: "Nepalietiškos chatpata salotos", tag: "veganiška", desc: "Avinžirniai, pomidorai, agurkai, čili, juoda druska, laimas, kalendra.", price: "7.80" }
+      ]},
+      { category: "Momo — mūsų specialybė", items: [
+        { name: "Vištienos momo", tag: "", desc: "Garuose troškinti koldūnai su vištiena, imbieru-česnaku ir momo prieskoniais.", price: "12.80" },
+        { name: "Paneero momo", tag: "", desc: "Garuose troškinti koldūnai su paneeru, svogūnais ir momo prieskoniais.", price: "12.30" },
+        { name: "Vištienos momo džolė", tag: "🌶", desc: "Momo aromatingame, prieskoniuotame vištienos sultinyje.", price: "13.80" }
+      ]},
+      { category: "Iš tandūro", items: [
+        { name: "Vištienos tikka", tag: "🌶", desc: "Jogurte marinuota vištiena iš tandūro. Česnakinė naan, salotos, padažas.", price: "12.80" },
+        { name: "Vištienos malai tikka", tag: "", desc: "Vištiena grietinėlės, sviesto ir anakardžių marinate.", price: "13.30" },
+        { name: "Paneero tikka", tag: "🌶", desc: "Paneero sūris sodriame prieskonių ir jogurto marinate.", price: "12.30" },
+        { name: "Nepalietiška vištienos sekuva", tag: "🌶🌶", desc: "Vištiena su Himalajų žolelėmis ir šefo prieskoniais.", price: "13.80" },
+        { name: "Nepalietiška ėrienos sekuva", tag: "🌶🌶", desc: "Ėriena su Himalajų žolelėmis ir šefo prieskoniais.", price: "17.30" }
+      ]},
+      { category: "Kariai", items: [
+        { name: "Sviestinė vištiena", tag: "", desc: "Vištienos krūtinėlė sviesto, grietinėlės, pomidorų ir svogūnų padaže.", price: "12.30" },
+        { name: "Vištienos tikka masala", tag: "", desc: "Vištienos krūtinėlė aromatingame pomidorų padaže.", price: "12.30" },
+        { name: "Paneero masala", tag: "", desc: "Kvapnus paneero troškinys su pomidorais, svogūnais ir imbieru.", price: "11.80" },
+        { name: "Daržovių masala kari", tag: "veganiška", desc: "Cukinijos, baklažanai, paprikos, žiediniai kopūstai indiškų prieskonių padaže.", price: "11.30" }
+      ]},
+      { category: "Priedai", items: [
+        { name: "Šviežia naan", tag: "", desc: "Kepama tandūre pagal užsakymą.", price: "2.00" },
+        { name: "Basmati ryžiai", tag: "", desc: "", price: "3.80" },
+        { name: "Jeera ryžiai", tag: "", desc: "Basmati su kmynais, ciberžole, žolelėmis ir laimu.", price: "5.80" }
+        // Pridėkite daugiau priedų čia
+      ]},
+      { category: "Desertai", items: [
+        { name: "Gulab Jamun", tag: "", desc: "Šilti pieno rutuliukai kardamono sirupe.", price: "5.50" },
+        { name: "Soan Papdi", tag: "", desc: "Trapus avinžirnių miltų saldumynas su kardamonu ir pistacijomis.", price: "4.50" }
+      ]}
+    ];
+  }
+
+  DRINKS_EN() {
+    return [
+      { group: "Cold & Non-Alcoholic", items: [
+        { name: "Mango Lassi", tag: "", desc: "Yoghurt drink with mango, mint and cardamom.", price: "5.80" }
+      ]}
+      // Future groups — just add objects here:
+      // { group: "Hot Beverages", items: [ { name: "Masala Chai", desc: "…", price: "3.50" } ]},
+      // { group: "Beer", items: [ … ]},
+      // { group: "Wine", items: [ … ]},
+      // { group: "Spirits & Cocktails", items: [ … ]},
+    ];
+  }
+
+  DRINKS_LT() {
+    return [
+      { group: "Šalti ir nealkoholiniai", items: [
+        { name: "Mango lasis", tag: "", desc: "Jogurto gėrimas su mangu, mėta ir kardamonu.", price: "5.80" }
+      ]}
+      // Būsimos grupės — tiesiog pridėkite objektus čia:
+      // { group: "Karšti gėrimai", items: [ … ]},
+      // { group: "Alus", items: [ … ]},
+      // { group: "Vynas", items: [ … ]},
+      // { group: "Stiprieji ir kokteiliai", items: [ … ]},
+    ];
+  }
+
+  componentDidMount() {
+    this._revealed = new WeakSet();
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      this._io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            this._revealed.add(e.target);
+            this._io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+      this._observeReveals();
+    } else {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
+    }
+    this._onScroll = () => this._syncHeader();
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    this._syncHeader();
+  }
+
+  _observeReveals() {
+    if (!this._io) return;
+    document.querySelectorAll(".reveal").forEach((el) => {
+      if (!this._revealed.has(el)) this._io.observe(el);
+    });
+  }
+
+  _syncHeader() {
+    const h = document.querySelector(".site-header");
+    if (h) h.classList.toggle("scrolled", window.scrollY > 50);
+  }
+
+  componentDidUpdate() {
+    // React resets classNames on re-render (e.g. language toggle) — re-apply.
+    if (this._revealed) {
+      document.querySelectorAll(".reveal").forEach((el) => { if (this._revealed.has(el)) el.classList.add("in"); });
+      this._observeReveals();
+    } else {
+      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
+    }
+    this._syncHeader();
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._onScroll) window.removeEventListener("scroll", this._onScroll);
+  }
+
+  lang() { return this.state.lang || this.props.defaultLang || "en"; }
+
+  renderVals() {
+    const L = this.lang();
+    const D = this.TR[L];
+    const F = this.FIXED;
+    const threshold = this.props.reviewThreshold ?? 4;
+    const rating = this.state.rating;
+    const rated = rating > 0;
+    const isHappy = rating >= threshold;
+
+    const menu = D.menu.filter(c => c.items.length).map(c => ({ category: c.category, items: c.items.map(it => ({ ...it, priceLabel: "€" + it.price })) }));
+    const drinks = D.drinks.filter(g => g.items.length).map(g => ({ group: g.group, items: g.items.map(it => ({ ...it, priceLabel: "€" + it.price })) }));
+    const reviews = D.reviews.map(r => ({ ...r, starsGlyph: "★".repeat(r.stars) + "☆".repeat(5 - r.stars) }));
+    const stars = [1,2,3,4,5].map(n => ({
+      n, label: n + (L === "lt" ? " žvaigždutės" : " stars"),
+      color: n <= rating ? "#DBB45E" : "rgba(219,180,94,.28)",
+      on: () => this.setState({ rating: n, sent: false, forcePrivate: false })
+    }));
+
+    return {
+      langLabel: D.langLabel,
+      toggleLang: () => this.setState({ lang: L === "en" ? "lt" : "en" }),
+      t: D.ui, menu, drinks, reviews, hours: D.hours, signature: D.signature,
+      showSignature: this.props.showSignature ?? true,
+      name: F.name, address: F.address, phone: F.phone, email: F.email,
+      phoneLink: "tel:" + F.phone.replace(/\s/g, ""), emailLink: "mailto:" + F.email,
+      woltUrl: F.woltUrl, boltUrl: F.boltUrl, mapsUrl: F.mapsUrl,
+      instagramUrl: F.instagramUrl, facebookUrl: F.facebookUrl, googleUrl: F.googleUrl,
+      rating: F.rating, year: new Date().getFullYear(),
+      stars,
+      notRated: !rated && !this.state.sent,
+      showHappy: rated && isHappy && !this.state.sent,
+      showUnhappy: rated && !isHappy && !this.state.sent,
+      showPrivateForm: !this.state.sent && ((rated && !isHappy) || this.state.forcePrivate),
+      sent: this.state.sent,
+      openPrivate: () => this.setState({ forcePrivate: true }),
+      submitBooking: (e) => {
+        e.preventDefault();
+        const f = e.target;
+        if (!f.reportValidity()) return;
+        const g = id => (document.getElementById(id) || {}).value || "";
+        const subject = `Reservation — ${g("f-name")}, ${g("f-date")} ${g("f-time")}`;
+        const body = [`Hello ${F.name},`, "", "I'd like to reserve a table:", "",
+          `Name: ${g("f-name")}`, `Phone: ${g("f-phone")}`, `Email: ${g("f-email")}`,
+          `Date: ${g("f-date")}`, `Time: ${g("f-time")}`, `Guests: ${g("f-party")}`,
+          `Notes: ${g("f-notes") || "—"}`, "", "Please confirm by reply. Thank you!"].join("\n");
+        window.location.href = `mailto:${F.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      },
+      submitPrivate: (e) => {
+        e.preventDefault();
+        const txt = (document.getElementById("fb-text") || {}).value || "";
+        const contact = (document.getElementById("fb-contact") || {}).value || "";
+        const subject = `Private feedback (${this.state.rating}★) — website`;
+        const body = [`Rating: ${this.state.rating}/5`, "", txt, "", `Contact: ${contact}`].join("\n");
+        window.location.href = `mailto:${F.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        this.setState({ sent: true });
+      }
+    };
+  }
+}
+</script>
+
+
+</body></html>
