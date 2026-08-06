@@ -231,7 +231,10 @@
           <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="4">
             <div class="reveal" style="display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(120,32,22,.1)">
               <div>
-                <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
+                <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+                  <sc-if value="{{ it.diet === 'veg' }}" hint-placeholder-val=""><span title="{{ t.diet.veg }}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #2E7D32;border-radius:3px;flex-shrink:0"><span style="width:6px;height:6px;border-radius:50%;background:#2E7D32;display:block"></span></span></sc-if>
+                  <sc-if value="{{ it.diet === 'vegan' }}" hint-placeholder-val=""><span title="{{ t.diet.vegan }}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #2E7D32;border-radius:3px;flex-shrink:0;font-size:9px;line-height:1">🌱</span></sc-if>
+                  <sc-if value="{{ it.diet === 'nonveg' }}" hint-placeholder-val=""><span title="{{ t.diet.nonveg }}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #8B3A1E;border-radius:3px;flex-shrink:0"><span style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:7px solid #8B3A1E;display:block"></span></span></sc-if>
                   <span style="font-weight:600;font-size:15px;color:#3A2419">{{ it.name }}</span>
                   <sc-if value="{{ it.tag }}" hint-placeholder-val=""><span style="font-size:11px;font-weight:600;color:#B07A24;letter-spacing:.05em">{{ it.tag }}</span></sc-if>
                 </div>
@@ -263,7 +266,10 @@
           <sc-for list="{{ grp.items }}" as="it" hint-placeholder-count="3">
             <div class="reveal" style="display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(120,32,22,.1)">
               <div>
-                <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
+                <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+                  <sc-if value="{{ it.diet === 'veg' }}" hint-placeholder-val=""><span title="{{ t.diet.veg }}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #2E7D32;border-radius:3px;flex-shrink:0"><span style="width:6px;height:6px;border-radius:50%;background:#2E7D32;display:block"></span></span></sc-if>
+                  <sc-if value="{{ it.diet === 'vegan' }}" hint-placeholder-val=""><span title="{{ t.diet.vegan }}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #2E7D32;border-radius:3px;flex-shrink:0;font-size:9px;line-height:1">🌱</span></sc-if>
+                  <sc-if value="{{ it.diet === 'nonveg' }}" hint-placeholder-val=""><span title="{{ t.diet.nonveg }}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border:1.5px solid #8B3A1E;border-radius:3px;flex-shrink:0"><span style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:7px solid #8B3A1E;display:block"></span></span></sc-if>
                   <span style="font-weight:600;font-size:15px;color:#3A2419">{{ it.name }}</span>
                   <sc-if value="{{ it.tag }}" hint-placeholder-val=""><span style="font-size:11px;font-weight:600;color:#B07A24;letter-spacing:.05em">{{ it.tag }}</span></sc-if>
                 </div>
@@ -473,7 +479,8 @@ class Component extends DCLogic {
       ui: {
         nav: { menu: "Menu", drinks: "Drinks", order: "Order", reserve: "Reserve", reviews: "Reviews", visit: "Visit" },
         hero: { kicker: "Nepali & Indian kitchen · Vilnius", title: "The taste of the Himalayas, in the heart of Vilnius", tagline: "Nepal's warmth, steamed fresh in the Old Town.", desc: "The first Nepali kitchen in Lithuania — hand-folded momo, tandoor-fired tikka and slow curries, served in a warm room on Pylimo street.", btnReserve: "Reserve a Table", btnOrder: "Order Delivery" },
-        menu: { kicker: "The Menu", title: "From the steamer & the tandoor", lede: "Steamed momo, slow curries and tandoori dishes made the way they are in Kathmandu. Vegan options throughout.", note: "🌶 mildly spicy · 🌶🌶 spicy · Prices include VAT. Menu changes seasonally — see Wolt for today's full list." },
+        menu: { kicker: "The Menu", title: "From the steamer & the tandoor", lede: "Steamed momo, slow curries and tandoori dishes made the way they are in Kathmandu. Vegan options throughout.", note: "🟩 vegetarian · 🌱 vegan · 🟫 contains meat · 🌶 mildly spicy · 🌶🌶 spicy · Prices include VAT. Menu changes seasonally — see Wolt for today's full list." },
+        diet: { veg: "Vegetarian", vegan: "Vegan", nonveg: "Contains meat" },
         drinks: { kicker: "Drinks", title: "To drink", lede: "A short list for now — a full drinks menu (hot & cold, alcoholic & non-alcoholic) is on the way." },
         order: { kicker: "Order Online", title: "Delivery & pickup", lede: "Order straight from our kitchen through your favourite app.", woltHint: "Delivery & pickup — full menu, live tracking.", woltGo: "Order on Wolt →", boltHint: "Delivery & pickup across Vilnius.", boltGo: "Order on Bolt Food →" },
         reserve: { kicker: "Reservations", title: "Book a table", info1: "For groups of six or more, or same-day bookings, please call us directly at", info2: "Send the form and your email app opens with the details filled in — we'll confirm by reply.", labelName: "Name", labelPhone: "Phone", labelEmail: "Email", labelDate: "Date", labelTime: "Time", labelParty: "Guests", labelNotes: "Notes (allergies, occasion…)", submit: "Send reservation request", formNote: "Opens your email app with the details pre-filled. Can later be swapped for a live booking system." },
@@ -495,7 +502,8 @@ class Component extends DCLogic {
       ui: {
         nav: { menu: "Meniu", drinks: "Gėrimai", order: "Užsakyti", reserve: "Rezervuoti", reviews: "Atsiliepimai", visit: "Apsilankyti" },
         hero: { kicker: "Nepaliečių ir indų virtuvė · Vilnius", title: "Himalajų skonis pačioje Vilniaus širdyje", tagline: "Nepalo šiluma, garuose kepta senamiestyje.", desc: "Pirmoji nepaliečių virtuvė Lietuvoje — rankomis lipdyti momo, tandūre kepta tikka ir lėtai virti kariai jaukioje patalpoje Pylimo gatvėje.", btnReserve: "Rezervuoti staliuką", btnOrder: "Užsisakyti pristatymą" },
-        menu: { kicker: "Meniu", title: "Iš garų puodo ir tandūro", lede: "Garuose troškinti momo, lėtai virti kariai ir tandūro patiekalai, gaminami kaip Katmandu. Visur yra veganiškų pasirinkimų.", note: "🌶 vidutiniškai aštru · 🌶🌶 aštru · Kainos su PVM. Meniu keičiasi sezoniškai — pilną sąrašą žr. Wolt." },
+        menu: { kicker: "Meniu", title: "Iš garų puodo ir tandūro", lede: "Garuose troškinti momo, lėtai virti kariai ir tandūro patiekalai, gaminami kaip Katmandu. Visur yra veganiškų pasirinkimų.", note: "🟩 vegetariška · 🌱 veganiška · 🟫 su mėsa · 🌶 vidutiniškai aštru · 🌶🌶 aštru · Kainos su PVM. Meniu keičiasi sezoniškai — pilną sąrašą žr. Wolt." },
+        diet: { veg: "Vegetariška", vegan: "Veganiška", nonveg: "Su mėsa" },
         drinks: { kicker: "Gėrimai", title: "Gerti", lede: "Kol kas trumpas sąrašas — pilnas gėrimų meniu (karšti ir šalti, alkoholiniai ir nealkoholiniai) netrukus." },
         order: { kicker: "Užsakyti internetu", title: "Pristatymas ir atsiėmimas", lede: "Užsisakykite tiesiai iš mūsų virtuvės per mėgstamą programėlę.", woltHint: "Pristatymas ir atsiėmimas — pilnas meniu, sekimas.", woltGo: "Užsisakyti per Wolt →", boltHint: "Pristatymas ir atsiėmimas visame Vilniuje.", boltGo: "Užsisakyti per Bolt Food →" },
         reserve: { kicker: "Rezervacijos", title: "Rezervuokite staliuką", info1: "Grupėms nuo šešių žmonių ar tos pačios dienos rezervacijoms skambinkite tiesiogiai:", info2: "Išsiuntus formą atsidarys el. pašto programa su užpildytais duomenimis — patvirtinsime atsakymu.", labelName: "Vardas", labelPhone: "Telefonas", labelEmail: "El. paštas", labelDate: "Data", labelTime: "Laikas", labelParty: "Svečiai", labelNotes: "Pastabos (alergijos, proga…)", submit: "Siųsti rezervacijos užklausą", formNote: "Atidaro el. pašto programą su užpildytais duomenimis. Vėliau galima pakeisti tikra rezervacijų sistema." },
@@ -517,45 +525,45 @@ class Component extends DCLogic {
   MENU_EN() {
     return [
       { category: "Starters", items: [
-        { name: "Vegetable Samosa", tag: "vegan", desc: "Wheat pastry with potato, onion, peas, carrot and nuts. Salad and a sauce of your choice.", price: "8.30" },
-        { name: "Onion Bhaji", tag: "vegan", desc: "Crisp onion fritters in chickpea batter with cumin and ajwain, fresh chilli sauce.", price: "7.30" },
-        { name: "Vegetable Pakora", tag: "vegan", desc: "Zucchini and aubergine fried in spiced chickpea batter.", price: "7.80" },
-        { name: "Paneer Pakora", tag: "", desc: "Fried paneer cheese in chickpea batter and oriental spices.", price: "8.30" },
-        { name: "Tandoori Aloo Paratha", tag: "", desc: "Potato-stuffed flatbread with herbs, cucumber raita.", price: "6.80" }
+        { name: "Vegetable Samosa", tag: "", diet: "vegan", desc: "Wheat pastry with potato, onion, peas, carrot and nuts. Salad and a sauce of your choice.", price: "8.30" },
+        { name: "Onion Bhaji", tag: "", diet: "vegan", desc: "Crisp onion fritters in chickpea batter with cumin and ajwain, fresh chilli sauce.", price: "7.30" },
+        { name: "Vegetable Pakora", tag: "", diet: "vegan", desc: "Zucchini and aubergine fried in spiced chickpea batter.", price: "7.80" },
+        { name: "Paneer Pakora", tag: "", diet: "veg", desc: "Fried paneer cheese in chickpea batter and oriental spices.", price: "8.30" },
+        { name: "Tandoori Aloo Paratha", tag: "", diet: "veg", desc: "Potato-stuffed flatbread with herbs, cucumber raita.", price: "6.80" }
       ]},
       { category: "Soups & Salads", items: [
-        { name: "Chicken Thukpa", tag: "🌶", desc: "Traditional Nepali noodle soup with chicken, greens and Himalayan spices.", price: "10.30" },
-        { name: "Lamb Thukpa", tag: "🌶", desc: "Natural broth, tender lamb and egg noodles with Nepali spices.", price: "11.30" },
-        { name: "Kwati Soup", tag: "vegan", desc: "Seven sprouted lentils with Panch Puran spices.", price: "7.30" },
-        { name: "Nepali Chatpata Salad", tag: "vegan", desc: "Chickpeas, tomato, cucumber, chilli, black salt, lime, coriander.", price: "7.80" }
+        { name: "Chicken Thukpa", tag: "🌶", diet: "nonveg", desc: "Traditional Nepali noodle soup with chicken, greens and Himalayan spices.", price: "10.30" },
+        { name: "Lamb Thukpa", tag: "🌶", diet: "nonveg", desc: "Natural broth, tender lamb and egg noodles with Nepali spices.", price: "11.30" },
+        { name: "Kwati Soup", tag: "", diet: "vegan", desc: "Seven sprouted lentils with Panch Puran spices.", price: "7.30" },
+        { name: "Nepali Chatpata Salad", tag: "", diet: "vegan", desc: "Chickpeas, tomato, cucumber, chilli, black salt, lime, coriander.", price: "7.80" }
       ]},
       { category: "Momo — our signature", items: [
-        { name: "Chicken Momo", tag: "", desc: "Steamed dumplings with chicken, ginger-garlic, herbs and momo spices.", price: "12.80" },
-        { name: "Paneer Momo", tag: "", desc: "Steamed dumplings with paneer, onion, herbs and momo spices.", price: "12.30" },
-        { name: "Chicken Momo Jhol", tag: "🌶", desc: "Momo swimming in an aromatic, spiced chicken broth.", price: "13.80" }
+        { name: "Chicken Momo", tag: "", diet: "nonveg", desc: "Steamed dumplings with chicken, ginger-garlic, herbs and momo spices.", price: "12.80" },
+        { name: "Paneer Momo", tag: "", diet: "veg", desc: "Steamed dumplings with paneer, onion, herbs and momo spices.", price: "12.30" },
+        { name: "Chicken Momo Jhol", tag: "🌶", diet: "nonveg", desc: "Momo swimming in an aromatic, spiced chicken broth.", price: "13.80" }
       ]},
       { category: "From the Tandoor", items: [
-        { name: "Chicken Tikka", tag: "🌶", desc: "Yoghurt-marinated chicken from the tandoor. Garlic naan, salad, sauce.", price: "12.80" },
-        { name: "Chicken Malai Tikka", tag: "", desc: "Chicken in a cream, butter and cashew marinade.", price: "13.30" },
-        { name: "Paneer Tikka", tag: "🌶", desc: "Paneer in a rich spice and yoghurt marinade.", price: "12.30" },
-        { name: "Nepali Chicken Sekuwa", tag: "🌶🌶", desc: "Chicken with Himalayan herbs and the chef's own spices.", price: "13.80" },
-        { name: "Nepali Lamb Sekuwa", tag: "🌶🌶", desc: "Lamb with Himalayan herbs and the chef's own spices.", price: "17.30" }
+        { name: "Chicken Tikka", tag: "🌶", diet: "nonveg", desc: "Yoghurt-marinated chicken from the tandoor. Garlic naan, salad, sauce.", price: "12.80" },
+        { name: "Chicken Malai Tikka", tag: "", diet: "nonveg", desc: "Chicken in a cream, butter and cashew marinade.", price: "13.30" },
+        { name: "Paneer Tikka", tag: "🌶", diet: "veg", desc: "Paneer in a rich spice and yoghurt marinade.", price: "12.30" },
+        { name: "Nepali Chicken Sekuwa", tag: "🌶🌶", diet: "nonveg", desc: "Chicken with Himalayan herbs and the chef's own spices.", price: "13.80" },
+        { name: "Nepali Lamb Sekuwa", tag: "🌶🌶", diet: "nonveg", desc: "Lamb with Himalayan herbs and the chef's own spices.", price: "17.30" }
       ]},
       { category: "Curries", items: [
-        { name: "Butter Chicken", tag: "", desc: "Chicken breast in butter, cream, tomato and onion sauce.", price: "12.30" },
-        { name: "Chicken Tikka Masala", tag: "", desc: "Chicken breast in an aromatic tomato sauce.", price: "12.30" },
-        { name: "Paneer Masala", tag: "", desc: "Fragrant paneer stew with tomato, onion and ginger.", price: "11.80" },
-        { name: "Vegetable Masala Curry", tag: "vegan", desc: "Zucchini, aubergine, peppers, cauliflower in Indian spice sauce.", price: "11.30" }
+        { name: "Butter Chicken", tag: "", diet: "nonveg", desc: "Chicken breast in butter, cream, tomato and onion sauce.", price: "12.30" },
+        { name: "Chicken Tikka Masala", tag: "", diet: "nonveg", desc: "Chicken breast in an aromatic tomato sauce.", price: "12.30" },
+        { name: "Paneer Masala", tag: "", diet: "veg", desc: "Fragrant paneer stew with tomato, onion and ginger.", price: "11.80" },
+        { name: "Vegetable Masala Curry", tag: "", diet: "vegan", desc: "Zucchini, aubergine, peppers, cauliflower in Indian spice sauce.", price: "11.30" }
       ]},
       { category: "Sides", items: [
-        { name: "Fresh Naan", tag: "", desc: "Baked to order in the tandoor.", price: "2.00" },
-        { name: "Basmati Rice", tag: "", desc: "", price: "3.80" },
-        { name: "Jeera Rice", tag: "", desc: "Basmati with cumin, turmeric, herbs and lime.", price: "5.80" }
-        // Add more sides here — same shape: { name, tag, desc, price }
+        { name: "Fresh Naan", tag: "", diet: "veg", desc: "Baked to order in the tandoor.", price: "2.00" },
+        { name: "Basmati Rice", tag: "", diet: "veg", desc: "", price: "3.80" },
+        { name: "Jeera Rice", tag: "", diet: "veg", desc: "Basmati with cumin, turmeric, herbs and lime.", price: "5.80" }
+        // Add more sides here — same shape: { name, tag, diet, desc, price }
       ]},
       { category: "Desserts", items: [
-        { name: "Gulab Jamun", tag: "", desc: "Warm milk dumplings in cardamom syrup.", price: "5.50" },
-        { name: "Soan Papdi", tag: "", desc: "Flaky gram-flour sweet with cardamom and pistachio.", price: "4.50" }
+        { name: "Gulab Jamun", tag: "", diet: "veg", desc: "Warm milk dumplings in cardamom syrup.", price: "5.50" },
+        { name: "Soan Papdi", tag: "", diet: "veg", desc: "Flaky gram-flour sweet with cardamom and pistachio.", price: "4.50" }
       ]}
     ];
   }
@@ -563,45 +571,45 @@ class Component extends DCLogic {
   MENU_LT() {
     return [
       { category: "Užkandžiai", items: [
-        { name: "Daržovių samosa", tag: "veganiška", desc: "Kvietinė tešla su bulvėmis, svogūnais, žirneliais, morkomis ir riešutais. Salotos ir padažas.", price: "8.30" },
-        { name: "Svogūnų badžis", tag: "veganiška", desc: "Traškūs svogūnų kepsneliai avinžirnių tešloje, šviežio čili padažas.", price: "7.30" },
-        { name: "Daržovių pakora", tag: "veganiška", desc: "Cukinijos ir baklažanai prieskoninėje avinžirnių tešloje.", price: "7.80" },
-        { name: "Paneero pakora", tag: "", desc: "Keptas paneero sūris avinžirnių tešloje su rytietiškais prieskoniais.", price: "8.30" },
-        { name: "Tandūrio aliu parata", tag: "", desc: "Bulvėmis įdaryta duona su žolelėmis, agurkų raita.", price: "6.80" }
+        { name: "Daržovių samosa", tag: "", diet: "vegan", desc: "Kvietinė tešla su bulvėmis, svogūnais, žirneliais, morkomis ir riešutais. Salotos ir padažas.", price: "8.30" },
+        { name: "Svogūnų badžis", tag: "", diet: "vegan", desc: "Traškūs svogūnų kepsneliai avinžirnių tešloje, šviežio čili padažas.", price: "7.30" },
+        { name: "Daržovių pakora", tag: "", diet: "vegan", desc: "Cukinijos ir baklažanai prieskoninėje avinžirnių tešloje.", price: "7.80" },
+        { name: "Paneero pakora", tag: "", diet: "veg", desc: "Keptas paneero sūris avinžirnių tešloje su rytietiškais prieskoniais.", price: "8.30" },
+        { name: "Tandūrio aliu parata", tag: "", diet: "veg", desc: "Bulvėmis įdaryta duona su žolelėmis, agurkų raita.", price: "6.80" }
       ]},
       { category: "Sriubos ir salotos", items: [
-        { name: "Vištienos thukpa", tag: "🌶", desc: "Tradicinė nepalietiška makaronų sriuba su vištiena ir Himalajų prieskoniais.", price: "10.30" },
-        { name: "Ėrienos thukpa", tag: "🌶", desc: "Natūralus sultinys, švelni ėriena ir kiaušininiai makaronai.", price: "11.30" },
-        { name: "Kwati sriuba", tag: "veganiška", desc: "Septynių daigintų ankštinių sriuba su Panch Puran prieskoniais.", price: "7.30" },
-        { name: "Nepalietiškos chatpata salotos", tag: "veganiška", desc: "Avinžirniai, pomidorai, agurkai, čili, juoda druska, laimas, kalendra.", price: "7.80" }
+        { name: "Vištienos thukpa", tag: "🌶", diet: "nonveg", desc: "Tradicinė nepalietiška makaronų sriuba su vištiena ir Himalajų prieskoniais.", price: "10.30" },
+        { name: "Ėrienos thukpa", tag: "🌶", diet: "nonveg", desc: "Natūralus sultinys, švelni ėriena ir kiaušininiai makaronai.", price: "11.30" },
+        { name: "Kwati sriuba", tag: "", diet: "vegan", desc: "Septynių daigintų ankštinių sriuba su Panch Puran prieskoniais.", price: "7.30" },
+        { name: "Nepalietiškos chatpata salotos", tag: "", diet: "vegan", desc: "Avinžirniai, pomidorai, agurkai, čili, juoda druska, laimas, kalendra.", price: "7.80" }
       ]},
       { category: "Momo — mūsų specialybė", items: [
-        { name: "Vištienos momo", tag: "", desc: "Garuose troškinti koldūnai su vištiena, imbieru-česnaku ir momo prieskoniais.", price: "12.80" },
-        { name: "Paneero momo", tag: "", desc: "Garuose troškinti koldūnai su paneeru, svogūnais ir momo prieskoniais.", price: "12.30" },
-        { name: "Vištienos momo džolė", tag: "🌶", desc: "Momo aromatingame, prieskoniuotame vištienos sultinyje.", price: "13.80" }
+        { name: "Vištienos momo", tag: "", diet: "nonveg", desc: "Garuose troškinti koldūnai su vištiena, imbieru-česnaku ir momo prieskoniais.", price: "12.80" },
+        { name: "Paneero momo", tag: "", diet: "veg", desc: "Garuose troškinti koldūnai su paneeru, svogūnais ir momo prieskoniais.", price: "12.30" },
+        { name: "Vištienos momo džolė", tag: "🌶", diet: "nonveg", desc: "Momo aromatingame, prieskoniuotame vištienos sultinyje.", price: "13.80" }
       ]},
       { category: "Iš tandūro", items: [
-        { name: "Vištienos tikka", tag: "🌶", desc: "Jogurte marinuota vištiena iš tandūro. Česnakinė naan, salotos, padažas.", price: "12.80" },
-        { name: "Vištienos malai tikka", tag: "", desc: "Vištiena grietinėlės, sviesto ir anakardžių marinate.", price: "13.30" },
-        { name: "Paneero tikka", tag: "🌶", desc: "Paneero sūris sodriame prieskonių ir jogurto marinate.", price: "12.30" },
-        { name: "Nepalietiška vištienos sekuva", tag: "🌶🌶", desc: "Vištiena su Himalajų žolelėmis ir šefo prieskoniais.", price: "13.80" },
-        { name: "Nepalietiška ėrienos sekuva", tag: "🌶🌶", desc: "Ėriena su Himalajų žolelėmis ir šefo prieskoniais.", price: "17.30" }
+        { name: "Vištienos tikka", tag: "🌶", diet: "nonveg", desc: "Jogurte marinuota vištiena iš tandūro. Česnakinė naan, salotos, padažas.", price: "12.80" },
+        { name: "Vištienos malai tikka", tag: "", diet: "nonveg", desc: "Vištiena grietinėlės, sviesto ir anakardžių marinate.", price: "13.30" },
+        { name: "Paneero tikka", tag: "🌶", diet: "veg", desc: "Paneero sūris sodriame prieskonių ir jogurto marinate.", price: "12.30" },
+        { name: "Nepalietiška vištienos sekuva", tag: "🌶🌶", diet: "nonveg", desc: "Vištiena su Himalajų žolelėmis ir šefo prieskoniais.", price: "13.80" },
+        { name: "Nepalietiška ėrienos sekuva", tag: "🌶🌶", diet: "nonveg", desc: "Ėriena su Himalajų žolelėmis ir šefo prieskoniais.", price: "17.30" }
       ]},
       { category: "Kariai", items: [
-        { name: "Sviestinė vištiena", tag: "", desc: "Vištienos krūtinėlė sviesto, grietinėlės, pomidorų ir svogūnų padaže.", price: "12.30" },
-        { name: "Vištienos tikka masala", tag: "", desc: "Vištienos krūtinėlė aromatingame pomidorų padaže.", price: "12.30" },
-        { name: "Paneero masala", tag: "", desc: "Kvapnus paneero troškinys su pomidorais, svogūnais ir imbieru.", price: "11.80" },
-        { name: "Daržovių masala kari", tag: "veganiška", desc: "Cukinijos, baklažanai, paprikos, žiediniai kopūstai indiškų prieskonių padaže.", price: "11.30" }
+        { name: "Sviestinė vištiena", tag: "", diet: "nonveg", desc: "Vištienos krūtinėlė sviesto, grietinėlės, pomidorų ir svogūnų padaže.", price: "12.30" },
+        { name: "Vištienos tikka masala", tag: "", diet: "nonveg", desc: "Vištienos krūtinėlė aromatingame pomidorų padaže.", price: "12.30" },
+        { name: "Paneero masala", tag: "", diet: "veg", desc: "Kvapnus paneero troškinys su pomidorais, svogūnais ir imbieru.", price: "11.80" },
+        { name: "Daržovių masala kari", tag: "", diet: "vegan", desc: "Cukinijos, baklažanai, paprikos, žiediniai kopūstai indiškų prieskonių padaže.", price: "11.30" }
       ]},
       { category: "Priedai", items: [
-        { name: "Šviežia naan", tag: "", desc: "Kepama tandūre pagal užsakymą.", price: "2.00" },
-        { name: "Basmati ryžiai", tag: "", desc: "", price: "3.80" },
-        { name: "Jeera ryžiai", tag: "", desc: "Basmati su kmynais, ciberžole, žolelėmis ir laimu.", price: "5.80" }
+        { name: "Šviežia naan", tag: "", diet: "veg", desc: "Kepama tandūre pagal užsakymą.", price: "2.00" },
+        { name: "Basmati ryžiai", tag: "", diet: "veg", desc: "", price: "3.80" },
+        { name: "Jeera ryžiai", tag: "", diet: "veg", desc: "Basmati su kmynais, ciberžole, žolelėmis ir laimu.", price: "5.80" }
         // Pridėkite daugiau priedų čia
       ]},
       { category: "Desertai", items: [
-        { name: "Gulab Jamun", tag: "", desc: "Šilti pieno rutuliukai kardamono sirupe.", price: "5.50" },
-        { name: "Soan Papdi", tag: "", desc: "Trapus avinžirnių miltų saldumynas su kardamonu ir pistacijomis.", price: "4.50" }
+        { name: "Gulab Jamun", tag: "", diet: "veg", desc: "Šilti pieno rutuliukai kardamono sirupe.", price: "5.50" },
+        { name: "Soan Papdi", tag: "", diet: "veg", desc: "Trapus avinžirnių miltų saldumynas su kardamonu ir pistacijomis.", price: "4.50" }
       ]}
     ];
   }
@@ -609,7 +617,7 @@ class Component extends DCLogic {
   DRINKS_EN() {
     return [
       { group: "Cold & Non-Alcoholic", items: [
-        { name: "Mango Lassi", tag: "", desc: "Yoghurt drink with mango, mint and cardamom.", price: "5.80" }
+        { name: "Mango Lassi", tag: "", diet: "veg", desc: "Yoghurt drink with mango, mint and cardamom.", price: "5.80" }
       ]}
       // Future groups — just add objects here:
       // { group: "Hot Beverages", items: [ { name: "Masala Chai", desc: "…", price: "3.50" } ]},
@@ -622,7 +630,7 @@ class Component extends DCLogic {
   DRINKS_LT() {
     return [
       { group: "Šalti ir nealkoholiniai", items: [
-        { name: "Mango lasis", tag: "", desc: "Jogurto gėrimas su mangu, mėta ir kardamonu.", price: "5.80" }
+        { name: "Mango lasis", tag: "", diet: "veg", desc: "Jogurto gėrimas su mangu, mėta ir kardamonu.", price: "5.80" }
       ]}
       // Būsimos grupės — tiesiog pridėkite objektus čia:
       // { group: "Karšti gėrimai", items: [ … ]},
