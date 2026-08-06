@@ -417,6 +417,9 @@
           <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:#5A1712;margin-bottom:14px">{{ t.visit.findUs }}</h3>
           <p style="font-size:14.5px;color:#7C6350">{{ address }}</p>
           <p style="margin-top:12px"><a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="color:#7A2016;font-weight:600;font-size:14.5px">{{ t.visit.directions }}</a></p>
+          <div style="margin-top:14px;width:160px;aspect-ratio:1/1;border-radius:12px;overflow:hidden;border:1px solid rgba(120,32,22,.18)">
+            <iframe src="{{ mapsEmbedUrl }}" title="{{ t.visit.findUs }} — {{ address }}" width="100%" height="100%" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
         <div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;color:#5A1712;margin-bottom:14px">{{ t.visit.openingHours }}</h3>
@@ -456,6 +459,7 @@ class Component extends DCLogic {
     name: "Mažoji Himalaja",
     address: "Pylimo g. 27, LT-01309 Vilnius, Lithuania",
     mapsUrl: "https://maps.google.com/?q=54.6777136,25.2796416",
+    mapsEmbedUrl: "https://www.google.com/maps?q=54.6777136,25.2796416&z=17&output=embed",
     phone: "+370 663 35083",
     email: "info@nirveyyunay.lt",
     woltUrl: "https://wolt.com/en/ltu/vilnius/restaurant/mazoji-himalaja-momo-tandoori",
@@ -716,7 +720,7 @@ class Component extends DCLogic {
       t: D.ui, menu, drinks, reviews, hours: D.hours,
       name: F.name, address: F.address, phone: F.phone, email: F.email,
       phoneLink: "tel:" + F.phone.replace(/\s/g, ""), emailLink: "mailto:" + F.email,
-      woltUrl: F.woltUrl, boltUrl: F.boltUrl, mapsUrl: F.mapsUrl,
+      woltUrl: F.woltUrl, boltUrl: F.boltUrl, mapsUrl: F.mapsUrl, mapsEmbedUrl: F.mapsEmbedUrl,
       instagramUrl: F.instagramUrl, facebookUrl: F.facebookUrl, googleUrl: F.googleUrl,
       rating: F.rating, year: new Date().getFullYear(),
       stars,
